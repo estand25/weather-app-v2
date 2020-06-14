@@ -1,0 +1,59 @@
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+}
+
+.DOW_frame {
+  color: white;
+  border: 1px groove black;
+  height: 110px;
+  width: 75px;
+  margin: 5px;
+  padding: 5px;
+}
+
+.DOW_title {
+  justify-content: center;
+  display: flex;
+  color: lightgray;
+  font-size: 15px;
+  margin:0px;
+}
+
+.DOW_title_Section {
+  padding: 1px;
+}
+
+.DOW_Middle_Section {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.DOW_Low_Section {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  margin: 0px;
+}
+
+.DOW_Subtitle_Hight {
+  color: grey;
+  font-size: 15px;
+  margin: 1px;
+}
+
+.DOW_Subtitle_Low {
+  color: lightgray;
+  font-size: 15px;
+  margin: 1px;
+}
