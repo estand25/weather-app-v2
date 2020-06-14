@@ -4,7 +4,7 @@ var __DEV__ = process.env.NODE_ENV === 'development'
 
 module.exports = {
     entry: [
-        __DEV__ && 'src/index.js',
+        __DEV__ && 'src/mocks/index.js',
         './index.js'
     ].filter(Boolean),
     output: {
@@ -14,9 +14,29 @@ module.exports = {
     },
     module: {
        rules: [
-           {test : /\.(js)$/, use: 'babel-loader'},
-           {test : /\.css$/, use: ['style-loader', 'css-loader']}
-       ] 
+           {
+               test: /\.(js)$/, 
+               loader:'babel-loader',
+               exclude: '/node_modules/'
+            },
+            {
+                test: /\.(jsx)$/, 
+                loader:'babel-loader', 
+                exclude: '/node_modules/'
+            },
+           {
+               test: /\.css$/, 
+               use: ['style-loader', 'css-loader']
+            },
+            {
+                test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
+                loader: 'svg-url-loader',
+                query: {
+                    limit: '10000',
+                    mimetype: 'application/svg+xml'
+                }
+            }
+       ]
     },
     devServer: {
       historyApiFallback: true,

@@ -1,12 +1,20 @@
 {
-  "name": "quiz-builder-frontend",
+  "name": "WeatherAppv2",
   "version": "1.0.0",
-  "description": "Quiz-builder front-end",
+  "description": "Second version of Weather App",
   "main": "index.js",
   "babel": {
     "presets": [
       "@babel/preset-env",
       "@babel/preset-react"
+    ],
+    "plugins": [
+      [
+        "@babel/plugin-transform-runtime",
+        {
+          "regenerator": true
+        }
+      ]
     ]
   },
   "scripts": {
@@ -27,11 +35,16 @@
   },
   "homepage": "https://github.com/estand25/quiz-builder-frontend#readme",
   "dependencies": {
+    "axios": "^0.19.2",
     "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react-dom": "^16.13.1",
+    "react-redux": "^7.2.0",
+    "redux": "^4.0.5",
+    "svg-url-loader": "^6.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.10.2",
+    "@babel/plugin-transform-runtime": "^7.10.1",
     "@babel/preset-env": "^7.10.2",
     "@babel/preset-react": "^7.10.1",
     "@testing-library/react": "^10.2.1",
