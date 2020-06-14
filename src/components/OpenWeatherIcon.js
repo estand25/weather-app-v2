@@ -1,7 +1,7 @@
 import React from 'react'
 
 const OpenWeatherIcon = ({icon}) => {
-    const iLink  = `http://openweathermap.org/img/w/${icon}.png`;
+    const iLink  = 'http://openweathermap.org/img/w/' + icon + '.png';
 
     return (
         <div>
