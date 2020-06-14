@@ -5,10 +5,10 @@ import { DayOfWeek } from '../../src/components'
 test('render day of week and confirm title appears', () => {
     const { getByText } = render(
         <DayOfWeek
-            title="Sun"
+            title='Sun'
             highTemp='72.5'
             lowTemp='71.5'
-            weather="01d"
+            weather='01d'
         />)
     
     const title = getByText('Sun')
