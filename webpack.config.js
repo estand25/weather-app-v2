@@ -4,7 +4,7 @@ var __DEV__ = process.env.NODE_ENV === 'development'
 
 module.exports = {
     entry: [
-        __DEV__ && 'src/index.js',
+        __DEV__ && 'src/mocks/index.js',
         './index.js'
     ].filter(Boolean),
     output: {
