@@ -16,14 +16,9 @@ module.exports = {
     module: {
        rules: [
            {
-               test: /\.(js)$/, 
-               loader:'babel-loader',
+               test: /\.(js|jsx)$/, 
+               use:['babel-loader', 'eslint-loader'],
                exclude: '/node_modules/'
-            },
-            {
-                test: /\.(jsx)$/, 
-                loader:'babel-loader', 
-                exclude: '/node_modules/'
             },
            {
                test: /\.css$/, 

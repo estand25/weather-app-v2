@@ -7,8 +7,8 @@ import CalendarItem from '../model/CalendarItem';
  * @param {*} lowTemp
  * @param {*} imageOfDay
  */
-export const GenerateDailyCard = (day, highTemp, lowTemp, imageOfDay) => {
-  return new CalendarItem(day, highTemp, lowTemp, imageOfDay);
+export const generateDailyCard = (day, highTemp, lowTemp, imageOfDay) => {
+    return new CalendarItem(day, highTemp, lowTemp, imageOfDay);
 };
 
 /**
@@ -18,25 +18,25 @@ export const GenerateDailyCard = (day, highTemp, lowTemp, imageOfDay) => {
  * @param {*} lowTempList
  * @param {*} imageOfDays
  */
-export const GenerateWeeklyCards = (
-  dayOfWeek,
-  highTempList,
-  lowTempList,
-  imageOfDays
+export const generateWeeklyCards = (
+    dayOfWeek,
+    highTempList,
+    lowTempList,
+    imageOfDays
 ) => {
-  var weekly = [];
+    var weekly = [];
 
-  for (let index = 0; index < dayOfWeek.length; index++) {
-    var day = new CalendarItem(
-      index,
-      dayOfWeek[index],
-      highTempList[index],
-      lowTempList[index],
-      imageOfDays[index]
-    );
+    for (let index = 0; index < dayOfWeek.length; index++) {
+        var day = new CalendarItem(
+            index,
+            dayOfWeek[index],
+            highTempList[index],
+            lowTempList[index],
+            imageOfDays[index]
+        );
 
-    weekly = weekly.concat([day]);
-  }
+        weekly = weekly.concat([day]);
+    }
 
-  return weekly;
+    return weekly;
 };
