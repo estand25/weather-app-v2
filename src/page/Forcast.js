@@ -58,6 +58,7 @@ const Forcast = () => {
     return (
         <div className='form-group'>
             <input
+                id='zip-input'
                 className='form-control'
                 style={{margin: 5}}
                 type='text'
@@ -65,6 +66,7 @@ const Forcast = () => {
                 onChange={un => setZip(un.target.value)}
             />
             <button
+                id='submit-btn'
                 className='btn btn-success'
                 style={{margin: 5}}
                 onClick={onSubmitClick}
