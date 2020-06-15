@@ -25,15 +25,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/estand25/quiz-builder-frontend.git"
+    "url": "git+https://github.com/estand25/weather-app-v2.git"
   },
   "keywords": [],
   "author": "Standley Eugene",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/estand25/quiz-builder-frontend/issues"
+    "url": "https://github.com/estand25/weather-app-v2/issues"
   },
-  "homepage": "https://github.com/estand25/quiz-builder-frontend#readme",
+  "homepage": "https://github.com/estand25/weather-app-v2#readme",
   "dependencies": {
     "axios": "^0.19.2",
     "react": "^16.13.1",
