@@ -2,7 +2,7 @@ import React from 'react'
 import { render } from '@testing-library/react'
 import { DayOfWeekForcast } from '../../src/components'
 
-test('render day of week forcast and confirm title appears', () => {
+it('render day of week forcast and confirm title appears', () => {
     const { getByText } = render(
         <DayOfWeekForcast
             dayOfWeek='Sun'
