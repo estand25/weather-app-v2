@@ -5,6 +5,8 @@
 
 This is a sample Weather-App using the [Open Weather Api Forecast](https://openweathermap.org/forecast16)
 
+Use the app [here](https://estand25.github.io/weather-app-v2/)
+
 ## Screenshots
 
 This is what the current version of the app looks like
