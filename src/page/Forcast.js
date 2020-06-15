@@ -8,6 +8,7 @@ const Forcast = () => {
     const [weekly, setWeekly] = useState([])
     const [isLoading, setLoading] = useState(false)
     const [zip, setZip] = useState('19475')
+    const [error, setError] = useState('')
 
     const asyncOpenData =  async() => {
         return await 
@@ -48,7 +49,14 @@ const Forcast = () => {
     )
 
     const onSubmitClick = async () =>{
-        populateIconList();
+        if(zip.length != 5 && typeof zip != Number){
+            setError('Invalid zip')
+        }
+        else 
+        {
+            populateIconList();
+            setError('')
+        }
     }
 
     if(!isLoading){
@@ -60,7 +68,7 @@ const Forcast = () => {
             <input
                 id='zip-input'
                 className='form-control'
-                style={{margin: 5}}
+                style={{margin: 5}} 
                 type='text'
                 value={zip}
                 onChange={un => setZip(un.target.value)}
@@ -74,6 +82,9 @@ const Forcast = () => {
                 Submit
             </button>
             <div className='row'>
+                <div className='row'>
+                    <label className='error-label'>{error}</label>
+                </div>
                 {weekly.map(w => (
                     <DayOfWeekForcast
                         key={w.id}
