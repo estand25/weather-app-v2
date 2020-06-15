@@ -3,23 +3,12 @@
   "version": "1.0.0",
   "description": "Second version of Weather App",
   "main": "index.js",
-  "babel": {
-    "presets": [
-      "@babel/preset-env",
-      "@babel/preset-react"
-    ],
-    "plugins": [
-      [
-        "@babel/plugin-transform-runtime",
-        {
-          "regenerator": true
-        }
-      ]
-    ]
-  },
   "scripts": {
     "create": "webpack",
     "start": "webpack-dev-server --open",
+    "format": "prettier --write \"src/**/*.js\"",
+    "eslint-fix": "eslint --fix \"src/**/*.js\"",
+    "build": "webpack --mode production",
     "coverage": "NODE_ENV=test jest --coverageReporters=lcov",
     "localcoverage": "jest --coverage  --coverageReporters=lcov"
   },
@@ -55,6 +44,7 @@
     "jest": "^26.0.1",
     "jest-svg-transformer": "^1.0.0",
     "msw": "^0.19.3",
+    "prettier": "2.0.5",
     "style-loader": "^1.2.1",
     "svg-url-loader": "^6.0.0",
     "webpack": "^4.43.0",
