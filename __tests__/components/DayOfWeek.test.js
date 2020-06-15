@@ -14,3 +14,16 @@ it('render day of week and confirm title appears', () => {
     const title = getByText('Sun')
     expect(title).toBeTruthy()
 })
+
+it('render day of week without crashing', () => {
+    const { getByText } = render(
+        <DayOfWeek
+            title='Sun'
+            highTemp='5'
+            lowTemp='9'
+            weather='01'
+        />)
+    
+    const title = getByText('Sun')
+    expect(title).toBeTruthy()
+})
