@@ -1,18 +1,13 @@
-import React from 'react'
+import React from 'react';
 
-const OpenWeatherIcon = ({icon}) => {
-    const iLink  = 'http://openweathermap.org/img/w/' + icon + '.png';
+const OpenWeatherIcon = ({ icon }) => {
+  const iLink = 'http://openweathermap.org/img/w/' + icon + '.png';
 
-    return (
-        <div>
-            <img
-                src={iLink}
-                width='64'
-                height='64'
-                alt=""
-            />
-        </div>
-    )
-}
+  return (
+    <div>
+      <img src={iLink} width="64" height="64" alt="" />
+    </div>
+  );
+};
 
-export default OpenWeatherIcon
+export default OpenWeatherIcon;

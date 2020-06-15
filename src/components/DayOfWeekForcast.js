@@ -1,15 +1,21 @@
-import React from 'react'
-import DayOfWeek from './DayOfWeek'
+import React from 'react';
+import DayOfWeek from './DayOfWeek';
 
-const DayOfWeekForcast = ({id, dayOfWeek, highTemp, lowTemp, weatherImage}) => {
-    return (
-        <DayOfWeek 
-            title={dayOfWeek}
-            highTemp={highTemp}
-            lowTemp={lowTemp}
-            weather={weatherImage}
-        />
-    )
-}
+const DayOfWeekForcast = ({
+  id,
+  dayOfWeek,
+  highTemp,
+  lowTemp,
+  weatherImage,
+}) => {
+  return (
+    <DayOfWeek
+      title={dayOfWeek}
+      highTemp={highTemp}
+      lowTemp={lowTemp}
+      weather={weatherImage}
+    />
+  );
+};
 
-export default DayOfWeekForcast
+export default DayOfWeekForcast;

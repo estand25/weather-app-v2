@@ -1,15 +1,10 @@
-import React from 'react'
-import { IconService } from '../service'
+import React from 'react';
+import { IconService } from '../service';
 
-const WeatherIcon = ({weather}) =>  {
-    const iconWeather = IconService.iconSwitch(weather)
+const WeatherIcon = ({ weather }) => {
+  const iconWeather = IconService.iconSwitch(weather);
 
-    return (
-        <img
-            src={iconWeather}
-            alt=""
-        />
-    )
-}
+  return <img src={iconWeather} alt="" />;
+};
 
-export default WeatherIcon
+export default WeatherIcon;
