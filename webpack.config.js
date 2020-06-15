@@ -1,6 +1,6 @@
-var path = require('path')
-var HtmlWebpackPlugin = require('html-webpack-plugin')
-var __DEV__ = process.env.NODE_ENV === 'development'
+var path = require('path');
+var HtmlWebpackPlugin = require('html-webpack-plugin');
+var __DEV__ = process.env.NODE_ENV === 'development';
 
 module.exports = {
     devtool: 'inline-source-map',
@@ -11,18 +11,19 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'index_bundle.js',
-        publicPath: '/',
+        publicPath: '/'
     },
     module: {
-       rules: [
-           {
-               test: /\.(js|jsx)$/, 
-               use:['babel-loader', 'eslint-loader'],
-               exclude: '/node_modules/'
+        rules: [
+            {
+                test: /\.(js|jsx)$/,
+                use: ['babel-loader', 'eslint-loader'],
+                exclude: '/node_modules/'
             },
-           {
-               test: /\.css$/, 
-               use: ['style-loader', 'css-loader']
+            {
+                test: /\.css$/,
+                use: ['style-loader', 'css-loader',
+                    'less-loader']
             },
             {
                 test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
@@ -32,20 +33,20 @@ module.exports = {
                     mimetype: 'application/svg+xml'
                 }
             }
-       ]
+        ]
     },
     devServer: {
-      historyApiFallback: true,
+        historyApiFallback: true
     },
     mode: 'development',
     plugins: [
-        new HtmlWebpackPlugin ({
+        new HtmlWebpackPlugin({
             template: 'public/index.html'
         })
     ],
     resolve: {
         extensions: [
-            ".ts",".tsx",".js",".jsx",".json"
+            ".ts", ".tsx", ".js", ".jsx", ".json"
         ]
     }
-}
+};
