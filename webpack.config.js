@@ -36,6 +36,7 @@ module.exports = {
         ]
     },
     devServer: {
+        contentBase: "./build",
         historyApiFallback: true
     },
     mode: 'development',
