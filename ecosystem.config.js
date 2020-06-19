@@ -1,12 +1,8 @@
 module.exports = {
     apps: [{
-        script: 'index.js',
-        watch: '.'
-    }, {
-        script: './service-worker/',
-        watch: ['./service-worker']
+        name: 'weather-app-v2',
+        script: 'index.js'
     }],
-
     deploy: {
         production: {
             "user": 'SSH_USERNAME',
