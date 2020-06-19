@@ -1,5 +1,6 @@
 {
   "name": "WeatherAppv2",
+  "type": "module",
   "version": "1.0.0",
   "description": "Second version of Weather App",
   "main": "index.js",
