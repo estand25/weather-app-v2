@@ -1,7 +1,9 @@
 module.exports = {
     apps: [{
         name: 'weather-app-v2',
-        script: 'index.js'
+        script: 'npx',
+        interpreter: 'none',
+        args: 'serve -p 8080 -T'
     }],
     deploy: {
         production: {
