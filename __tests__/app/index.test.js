@@ -1,8 +1,9 @@
-import React from 'react'
-import { render, fireEvent } from '@testing-library/react'
-import App from '../../src/app/index.js'
+/* eslint-disable no-undef */
+import React from 'react';
+import { render } from '@testing-library/react';
+import App from '../../src/app/index.js';
 
 it('render without crashing', () => {
-    const app = render(<App />)
-    expect(app).toBeTruthy()
-})
+    const app = render(<App />);
+    expect(app).toBeTruthy();
+});
