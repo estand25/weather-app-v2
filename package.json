@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "create": "webpack",
-    "start": "webpack-dev-server --open",
+    "dev": "webpack-dev-server --open",
+    "start": "node server.js",
+    "heroku-postbuild": "weback -p",
     "format": "prettier --write \"src/**/*.js\"",
     "eslint-fix": "eslint --fix \"src/**/*.js\"",
     "build": "webpack --mode production",
