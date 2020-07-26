@@ -14,8 +14,16 @@ const Forcast = () => {
     const [error, setError] = useState('');
 
     const asyncOpenData = async () => {
+        var url = "";
+
+        if (location.protocol === 'http:') {
+            url = `http://api.openweathermap.org/data/2.5/forecast?zip=${zip},us&cnt=40&units=imperial&appid=fff46882afbf25c4f00498e88eb69975`;
+        } else {
+            url = `https://api.openweathermap.org/data/2.5/forecast?zip=${zip},us&cnt=40&units=imperial&appid=fff46882afbf25c4f00498e88eb69975`;
+        }
+
         return await FetchService.fetchJson(
-            `http://api.openweathermap.org/data/2.5/forecast?zip=${zip},us&cnt=40&units=imperial&appid=fff46882afbf25c4f00498e88eb69975`,
+            url,
             'get'
         );
     };
