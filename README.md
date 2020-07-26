@@ -5,8 +5,6 @@
 
 This is a sample Weather-App using the [Open Weather Api Forecast](https://openweathermap.org/forecast16)
 
-About app [here](https://estand25.github.io/weather-app-v2/)
-
 Use app [here](https://immense-thicket-21118.herokuapp.com/)
 
 ## Screenshots
