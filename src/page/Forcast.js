@@ -23,8 +23,7 @@ const Forcast = () => {
         }
 
         return await FetchService.fetchJson(
-            url,
-            'get'
+            url, 'get'
         );
     };
 
